@@ -1,0 +1,16 @@
+**/*.sc
+**/.DS_Store
+**/.cache-main
+**/.cache-tests
+**/.worksheet
+.cache
+.classpath
+.history
+.idea
+.project
+.settings
+bin/
+hs_err_pid*.log
+project/project
+project/target
+target
