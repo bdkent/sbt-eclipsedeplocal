@@ -45,7 +45,7 @@ Using `sbt-eclipse`'s `eclipse` command, the `/awesome-app` project will depend 
 
 This is where the `edlLocalizeDependency` task comes in!
 
-The following will rewrite the `.classpath` in `/awesome-app` to reference the `/awesome-library` Scala IDE project instead of the publsihed artifact:
+The following will rewrite the `.classpath` in `/awesome-app` to reference the `/awesome-library` Scala IDE project instead of the published artifact:
 ```
 sbt:awesome-app> edlLocalizeDependency  org.foo:awesome-library:0.1.0  awesome-library
 ```
