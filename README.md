@@ -56,9 +56,9 @@ sbt:awesome-app> edlLocalizeDependency  org.foo:awesome-library:0.1.0
 ```
 
 After running `edlLocalizeDependency`, go back to Scala IDE and:
-# refresh the affected projects 
-# (probably) run `Project -> Clean... -> Clean all projects` (to remove whatever Scala IDE is probably caching)
-# (probably) restart Scala IDE (because it it probably still caching something)
+1. refresh the affected projects 
+2. (probably) run `Project -> Clean... -> Clean all projects` (to remove whatever Scala IDE is probably caching)
+3. (probably) restart Scala IDE (because it it probably still caching something)
 
 ## Configuration
 
