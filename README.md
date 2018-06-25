@@ -55,5 +55,23 @@ If the Scala IDE's project name is the same as the name of the artifact (which i
 sbt:awesome-app> edlLocalizeDependency  org.foo:awesome-library:0.1.0
 ```
 
+After running `edlLocalizeDependency`, go back to Scala IDE and:
+# refresh the affected projects 
+# (probably) run `Project -> Clean... -> Clean all projects` (to remove whatever Scala IDE is probably caching)
+# (probably) restart Scala IDE (because it it probably still caching something)
 
+## Configuration
 
+There are a few settings you can set to configure the list of dependencies shown. The default values are shown below:
+
+### edlExcludedOrganizations: Seq[String] := Seq("org.scala-js", "org.scala-lang")
+if not empty, the list of dependencies will be filtered to **exclude** the given organizations
+
+### edlIncludedOrganizations: Seq[String] := Seq()
+if not empty, the list of dependencies will be filtered to only **include** the given organizations 
+
+### edlExcludedConfigurations: Seq[Option[String]] := Seq()
+if not empty, the list of dependencies will be filtered to **exclude** the given configurations
+
+### edlIncludedOrganizations: Seq[Option[String]] := Seq(None)
+if not empty, the list of dependencies will be filtered to only **include** the given configurations
