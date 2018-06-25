@@ -1,5 +1,5 @@
 # sbt-eclipsedeplocal
-sbt plugin to rewrite eclipse classpath of a dependency as a local project
+[sbt](scala-sbt.org) plugin to rewrite [Scala IDE](scala-ide.org) / Eclipse classpath of a dependency as a local project
 
 ## Overview
 
@@ -30,14 +30,16 @@ enablePlugins(SbtEclipseDependencyLocalizePlugin)
 
 ### edlLocalizeDependency
 
-Let's assume you have a two projects, a library (`awesome-library`) and an app (`awesome-app`), where the app includes the library.
+The usage of this task is easiest to explain by way of an example:
+
+Let's assume you have two projects, a library (`awesome-library`) and an app (`awesome-app`), where the app includes the library.
 
 So `awesome-app`'s `build.sbt` includes it like so:
 ```scala
 libraryDependencies += "org.foo" % "awesome-library" % "0.1.0"
 ```
 
-and you are actively developing both in Scala IDE, so you have both projects open as `/awesome-app` and `/awesome-library`.
+You are actively developing both in Scala IDE, so you have both projects open as `/awesome-app` and `/awesome-library`.
 
 Using `sbt-eclipse`'s `eclipse` command, the `/awesome-app` project will depend on the published artifact (assumedly somewhere in `$HOME/.ivy2`), not the (unrelated from sbt's perspective) Scala IDE project.
 
@@ -52,4 +54,6 @@ If the Scala IDE's project name is the same as the name of the artifact (which i
 ```
 sbt:awesome-app> edlLocalizeDependency  org.foo:awesome-library:0.1.0
 ```
+
+
 
